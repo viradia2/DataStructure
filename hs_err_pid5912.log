@@ -1,0 +1,257 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000069a8a0a5, pid=5912, tid=0x0000000000002508
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_101-b13) (build 1.8.0_101-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.101-b13 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x12a0a5]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000017786000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=9480, stack(0x0000000019320000,0x0000000019420000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x000000001941f401, RBX=0x0000000017786000, RCX=0x6564003b73736563, RDX=0x0000000000000000
+RSP=0x000000001941f450, RBP=0x6564003b73736563, RSI=0x000000001941f568, RDI=0x0000000001717c40
+R8 =0x0000000017786000, R9 =0x0000000000008000, R10=0x00000000199cd240, R11=0x000000001941f781
+R12=0x0000000000000000, R13=0x0000000017791088, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x0000000069a8a0a5, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000001941f450)
+0x000000001941f450:   0000000017786000 0000000017786000
+0x000000001941f460:   000000001941f518 0000000069c92f0b
+0x000000001941f470:   0000000017786000 0000000069caf76d
+0x000000001941f480:   0000000000000000 0000000069529155
+0x000000001941f490:   00000000199d75f0 000000006953291e
+0x000000001941f4a0:   0000000017786000 0000000000000000
+0x000000001941f4b0:   0000000000000000 0000000000000000
+0x000000001941f4c0:   6564003b73736563 0000000069531a15
+0x000000001941f4d0:   000000001941f568 000000001941f540
+0x000000001941f4e0:   0000000000000001 00000000199d75f0
+0x000000001941f4f0:   6564003b73736563 00000000695153b3
+0x000000001941f500:   000000001941f630 0000000000000001
+0x000000001941f510:   0000000000000001 00000000199d75f0
+0x000000001941f520:   0000000000000009 0000000000000000
+0x000000001941f530:   0000000000000000 0000000000000000
+0x000000001941f540:   0000000000000001 0000000069515571 
+
+Instructions: (pc=0x0000000069a8a0a5)
+0x0000000069a8a085:   cc cc cc cc cc cc cc cc cc cc cc 48 83 ec 28 48
+0x0000000069a8a095:   85 c9 75 07 33 c0 48 83 c4 28 c3 48 89 5c 24 20
+0x0000000069a8a0a5:   48 8b 19 48 85 db 74 20 48 83 fb 37 74 1a 48 8b
+0x0000000069a8a0b5:   13 48 8b cb ff 52 10 84 c0 74 0d 48 8b c3 48 8b 
+
+
+Register to memory mapping:
+
+RAX=0x000000001941f401 is pointing into the stack for thread: 0x0000000017786000
+RBX=0x0000000017786000 is a thread
+RCX=0x6564003b73736563 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x000000001941f450 is pointing into the stack for thread: 0x0000000017786000
+RBP=0x6564003b73736563 is an unknown value
+RSI=0x000000001941f568 is pointing into the stack for thread: 0x0000000017786000
+RDI=0x0000000001717c40 is an unknown value
+R8 =0x0000000017786000 is a thread
+R9 =0x0000000000008000 is an unknown value
+R10=0x00000000199cd240 is an unknown value
+R11=0x000000001941f781 is pointing into the stack for thread: 0x0000000017786000
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000017791088 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x0000000019320000,0x0000000019420000],  sp=0x000000001941f450,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x12a0a5]
+V  [jvm.dll+0x34f76d]
+C  [jdwp.dll+0x21a15]
+C  [jdwp.dll+0x53b3]
+C  [jdwp.dll+0x5571]
+C  [jdwp.dll+0xf0a8]
+C  [jdwp.dll+0x1f2d5]
+C  [jdwp.dll+0x1f4aa]
+V  [jvm.dll+0x1bd258]
+V  [jvm.dll+0x2451a4]
+V  [jvm.dll+0x29c18a]
+C  [msvcr100.dll+0x21d9f]
+C  [msvcr100.dll+0x21e3b]
+C  [KERNEL32.DLL+0x12774]
+C  [ntdll.dll+0x70d61]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001996f000 JavaThread "Service Thread" daemon [_thread_blocked, id=8576, stack(0x0000000019d20000,0x0000000019e20000)]
+  0x00000000177ae800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=6656, stack(0x0000000019820000,0x0000000019920000)]
+  0x00000000177ab800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=11380, stack(0x0000000019720000,0x0000000019820000)]
+  0x00000000177a9800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1036, stack(0x0000000019620000,0x0000000019720000)]
+  0x0000000017797000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=4504, stack(0x0000000019520000,0x0000000019620000)]
+  0x0000000017794000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=3008, stack(0x0000000019420000,0x0000000019520000)]
+=>0x0000000017786000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=9480, stack(0x0000000019320000,0x0000000019420000)]
+  0x000000001777c000 JavaThread "Attach Listener" daemon [_thread_blocked, id=12316, stack(0x0000000018de0000,0x0000000018ee0000)]
+  0x000000001777a800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=9192, stack(0x0000000018ce0000,0x0000000018de0000)]
+  0x000000001776a800 JavaThread "Finalizer" daemon [_thread_blocked, id=11768, stack(0x00000000189f0000,0x0000000018af0000)]
+  0x00000000032cf800 JavaThread "Reference Handler" daemon [_thread_blocked, id=4472, stack(0x00000000188f0000,0x00000000189f0000)]
+  0x000000000171e000 JavaThread "main" [_thread_blocked, id=5764, stack(0x0000000003060000,0x0000000003160000)]
+
+Other Threads:
+  0x0000000017748000 VMThread [stack: 0x00000000187f0000,0x00000000188f0000] [id=8932]
+  0x0000000019974000 WatcherThread [stack: 0x0000000019e20000,0x0000000019f20000] [id=11196]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 34816K, used 1812K [0x00000000d9a00000, 0x00000000dc080000, 0x0000000100000000)
+  eden space 30208K, 6% used [0x00000000d9a00000,0x00000000d9bc5220,0x00000000db780000)
+  from space 4608K, 0% used [0x00000000dbc00000,0x00000000dbc00000,0x00000000dc080000)
+  to   space 4608K, 0% used [0x00000000db780000,0x00000000db780000,0x00000000dbc00000)
+ ParOldGen       total 79360K, used 0K [0x000000008ce00000, 0x0000000091b80000, 0x00000000d9a00000)
+  object space 79360K, 0% used [0x000000008ce00000,0x000000008ce00000,0x0000000091b80000)
+ Metaspace       used 2643K, capacity 4494K, committed 4864K, reserved 1056768K
+  class space    used 284K, capacity 386K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00000000126a0000,0x0000000012a40000] byte_map_base: 0x0000000012239000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006a17a6d0
+ Begin Bits: [0x00000000130b0000, 0x0000000014d78000)
+ End Bits:   [0x0000000014d78000, 0x0000000016a40000)
+
+Polling page: 0x0000000001700000
+
+CodeCache: size=245760Kb used=1093Kb max_used=1101Kb free=244666Kb
+ bounds [0x00000000032e0000, 0x0000000003550000, 0x00000000122e0000]
+ total_blobs=244 nmethods=22 adapters=145
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.421 Thread 0x00000000177ae800   18  s    3       java.lang.StringBuffer::append (13 bytes)
+Event: 0.421 Thread 0x00000000177ae800 nmethod 18 0x00000000033ef110 code [0x00000000033ef2a0, 0x00000000033ef7a8]
+Event: 0.421 Thread 0x00000000177ae800   19       3       java.lang.String::indexOf (7 bytes)
+Event: 0.421 Thread 0x00000000177ae800 nmethod 19 0x00000000033efa10 code [0x00000000033efb80, 0x00000000033efda8]
+Event: 0.422 Thread 0x00000000177ae800   20       3       java.lang.AbstractStringBuilder::append (50 bytes)
+Event: 0.422 Thread 0x00000000177ab800   21       4       java.lang.String::charAt (29 bytes)
+Event: 0.422 Thread 0x00000000177ae800 nmethod 20 0x00000000033efe50 code [0x00000000033effe0, 0x00000000033f04e8]
+Event: 0.424 Thread 0x00000000177ab800 nmethod 21 0x00000000033f33d0 code [0x00000000033f3520, 0x00000000033f3618]
+Event: 0.442 Thread 0x00000000177ae800   22       3       java.lang.System::getSecurityManager (4 bytes)
+Event: 0.442 Thread 0x00000000177ae800 nmethod 22 0x00000000033f28d0 code [0x00000000033f2a20, 0x00000000033f2b50]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.120 Thread 0x000000000171e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d9a07cc0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u101\7261\hotspot\sK ÒXÑ¾?
+Event: 0.120 Thread 0x000000000171e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d9a07fa8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u101\7261\hotspot\src\share\vm\prims\
+
+Events (10 events):
+Event: 118.980 Executing VM operation: EnterInterpOnlyMode
+Event: 118.980 Executing VM operation: EnterInterpOnlyMode done
+Event: 118.980 Executing VM operation: GetCurrentLocation
+Event: 118.980 Executing VM operation: GetCurrentLocation done
+Event: 118.980 Executing VM operation: ChangeSingleStep
+Event: 118.980 Executing VM operation: ChangeSingleStep done
+Event: 118.981 Executing VM operation: ChangeSingleStep
+Event: 118.981 Executing VM operation: ChangeSingleStep done
+Event: 14580.415 Executing VM operation: RedefineClasses
+Event: 14580.443 Executing VM operation: RedefineClasses done
+
+
+Dynamic libraries:
+0x00007ff73f800000 - 0x00007ff73f837000 	C:\Program Files\Java\jdk1.8.0_101\bin\javaw.exe
+0x00007ffdba4a0000 - 0x00007ffdba67b000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdb7e00000 - 0x00007ffdb7eae000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdb6bf0000 - 0x00007ffdb6e39000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdb8d60000 - 0x00007ffdb8e01000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdb7a90000 - 0x00007ffdb7b2d000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdba440000 - 0x00007ffdba499000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdb8690000 - 0x00007ffdb87b5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdb8b70000 - 0x00007ffdb8cba000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdb6bd0000 - 0x00007ffdb6bee000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffdb7ed0000 - 0x00007ffdb7ef7000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdb7630000 - 0x00007ffdb77b8000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdb6e90000 - 0x00007ffdb6f2a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdb6ad0000 - 0x00007ffdb6bc6000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffdb0a60000 - 0x00007ffdb0cc7000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.15063.0_none_108e4f62dfe5d999\COMCTL32.dll
+0x00007ffdb8870000 - 0x00007ffdb8b69000 	C:\WINDOWS\System32\combase.dll
+0x00007ffdb7990000 - 0x00007ffdb79fa000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffdb8660000 - 0x00007ffdb868d000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000069550000 - 0x0000000069622000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\msvcr100.dll
+0x0000000069960000 - 0x000000006a1fa000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\server\jvm.dll
+0x00007ffdb7a80000 - 0x00007ffdb7a88000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffdac890000 - 0x00007ffdac899000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffdb7a10000 - 0x00007ffdb7a7c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffdb1680000 - 0x00007ffdb16a3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffdae270000 - 0x00007ffdae27a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffdb1650000 - 0x00007ffdb167b000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffdb6e40000 - 0x00007ffdb6e89000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000069950000 - 0x000000006995f000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\verify.dll
+0x0000000069920000 - 0x0000000069949000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.dll
+0x0000000069510000 - 0x0000000069545000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\jdwp.dll
+0x0000000069500000 - 0x0000000069508000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\npt.dll
+0x0000000069900000 - 0x0000000069916000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\zip.dll
+0x00007ffdb9000000 - 0x00007ffdba437000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffdb87c0000 - 0x00007ffdb886a000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffdb6f30000 - 0x00007ffdb7622000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffdb8600000 - 0x00007ffdb8651000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffdb6930000 - 0x00007ffdb6941000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffdb6970000 - 0x00007ffdb69bc000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ffdb6950000 - 0x00007ffdb6965000 	C:\WINDOWS\System32\profapi.dll
+0x00000000694f0000 - 0x00000000694f9000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\dt_socket.dll
+0x00007ffdaf980000 - 0x00007ffdaf996000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ffdb0d00000 - 0x00007ffdb0d1a000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ffdb3270000 - 0x00007ffdb3288000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ffdb61c0000 - 0x00007ffdb621c000 	C:\WINDOWS\System32\mswsock.dll
+0x00007ffdb5fa0000 - 0x00007ffdb6044000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ffdb7b30000 - 0x00007ffdb7b38000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffdb5f60000 - 0x00007ffdb5f97000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffdb1f60000 - 0x00007ffdb1f6e000 	C:\WINDOWS\System32\winrnr.dll
+0x000000006aec0000 - 0x000000006aee6000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x00007ffdb0650000 - 0x00007ffdb06bb000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ffdb6740000 - 0x00007ffdb6765000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ffdad820000 - 0x00007ffdad82a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffdb1a30000 - 0x00007ffdb1bd9000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:63952 -Dfile.encoding=Cp1252 
+java_command: com.leetcode.Hackersrank
+java_class_path (initial): C:\Users\vvviradia\workspace\DataStructures\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Java\jdk1.8.0_101\jre\bin;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_101\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Semesters\MEAN Application\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Java\jre1.8.0_101\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\vvviradia\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\Eclipse\Eclipse\eclipse;
+USERNAME=vvviradia
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 19 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 15063 (10.0.15063.296)
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 21 model 19 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 7541452k(2209688k free), swap 10922528k(2941676k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.101-b13) for windows-amd64 JRE (1.8.0_101-b13), built on Jun 22 2016 01:21:29 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Jun 29 20:12:23 2017
+elapsed time: 14580 seconds (0d 4h 3m 0s)
+

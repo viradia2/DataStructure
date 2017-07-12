@@ -18,23 +18,6 @@ public class Hamming {
 			sb.insert(i, 'x');
 		}
 		System.out.println(sb);
-		
-		
-//		if(size1 < size2){
-//			StringBuffer sb = new StringBuffer(string);
-//			for(int i=0; i<size2 - size1; i++){
-//				sb.insert(i, 'x');
-//			}
-//			System.out.println(sb);
-//		}else{
-//			StringBuffer sb = new StringBuffer(string2);
-//			for(int j=0; j<size1 - size2; j++){
-//				sb.insert(j, 'x');
-//			}
-//			System.out.println(sb);
-//		}
-		
-		
 	}
 	
 	
