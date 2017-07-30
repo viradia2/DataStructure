@@ -10,7 +10,7 @@ public class P_387 {
 		System.out.println(i);
 		System.out.println(53 / 10);
 		isPalindrome(-1);
-		int[] array = {2,5,8,11,14,18};
+		int[] array = {1,2,3,4,5,6,7,8};
 		evenFirstOddLast(array);
 	}
 
@@ -29,7 +29,7 @@ public class P_387 {
 		}
 		
 		for(int i=0; i<array.length; i++){
-			System.out.println(array[i]);
+			System.out.print(array[i] + ",");
 		}
 	}
 
